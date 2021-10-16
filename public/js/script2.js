@@ -43,6 +43,7 @@ dropArea.addEventListener("drop", (event) => {
 async function showFile(){
   let fileType = file.type; //getting selected file type
   let validExtensions = ["image/png","video/avi", "video/mp4"]; //adding some valid image extensions in array
+
   if(validExtensions.includes(fileType)){ //if user selected file is an image file
     let fileReader = new FileReader(); //creating new FileReader object
     fileReader.onload = async ()=>{
