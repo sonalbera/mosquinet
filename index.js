@@ -23,10 +23,6 @@ const blobServiceClient = new BlobServiceClient(
 );
 const containerClient = blobServiceClient.getContainerClient(process.env.CONTAINER_NAME1);
 
-app.get('/', (req, res) => {
-    res.render('index');
-});
-
 app.get('/upload', (req, res) => {
     res.render('uploader');
 });
@@ -37,7 +33,6 @@ app.post('/upload', async (req, res) => {
     req.busboy.on('file', async function (fieldname, file, filename) {
         console.log(filename);
         var filePath = __dirname + '\\files\\' + filename;
-        console.log(filePath);
         fstream = fs.createWriteStream(filePath);
         file.pipe(fstream);
         fstream.on('close', async () => {
@@ -47,13 +42,21 @@ app.post('/upload', async (req, res) => {
                 await blockBlobClient.uploadStream(fs.createReadStream(filePath), 4 * 1024 * 1024, 20, {
                     onProgress: (e) => console.log(e)
                 });
-                res.send("File uploaded to azure!");
+                res.redirect("/result/"+encodeURIComponent(blockBlobClient.url));
             } catch (err) {
                 res.send("Error occurred " + err.statusCode);
             }
         });        
     });
     
+});
+
+app.get("/result/:url", (req, res) => {
+    res.render('result', {src: req.params.url});
+});
+
+app.get('/', (req, res) => {
+    res.render('index');
 });
 
 app.listen(8000);
