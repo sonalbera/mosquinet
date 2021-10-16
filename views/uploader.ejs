@@ -13,13 +13,15 @@
     <header>Drag & Drop to Upload File</header>
     <span>OR</span>
     <button>
-      <form name="" method="" action="">
-          <input type="file">
-      </form>
-
+      <form name="" method="post" action="/upload" enctype="multipart/form-data">
+          <input type="file" name="file">
+          
+      
   </button>
     <input type="file" hidden>
   </div>
+  <input type="submit">
+      </form>
 
   <script src="js/script2.js"></script>
 
