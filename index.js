@@ -18,7 +18,8 @@ const sharedKeyCredential = new StorageSharedKeyCredential(
 const pipeline = newPipeline(sharedKeyCredential);
 
 const blobServiceClient = new BlobServiceClient(
-    `https://${process.env.AZURE_STORAGE_ACCOUNT_NAME}.blob.core.windows.net`,
+    //`https://${process.env.AZURE_STORAGE_ACCOUNT_NAME}.blob.core.windows.net`,
+    `https://drive.google.com/file/d/1tmSDQMNgm-ElN47IxCJSGN3knzmRDamY/view?usp=sharing`,
     pipeline
 );
 const containerClient = blobServiceClient.getContainerClient(process.env.CONTAINER_NAME1);
