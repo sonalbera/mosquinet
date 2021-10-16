@@ -40,7 +40,7 @@ dropArea.addEventListener("drop", (event)=>{
 
 function showFile(){
   let fileType = file.type; //getting selected file type
-  let validExtensions = ["image/jpeg", "image/jpg", "image/png"]; //adding some valid image extensions in array
+  let validExtensions = ["image/jpeg", "image/jpg", "image/png", "video/mp4", "video/wav"]; //adding some valid image extensions in array
   if(validExtensions.includes(fileType)){ //if user selected file is an image file
     let fileReader = new FileReader(); //creating new FileReader object
     fileReader.onload = ()=>{
@@ -50,9 +50,9 @@ function showFile(){
       dropArea.innerHTML = imgTag; //adding that created img tag inside dropArea container
     }
     fileReader.readAsDataURL(file);
-  }//else{
-   // alert("This is not an Image File!");
-  //  dropArea.classList.remove("active");
-    //dragText.textContent = "Drag & Drop to Upload File";
- // }
+  }else{
+  alert("This is not an valid format!");
+   dropArea.classList.remove("active");
+  dragText.textContent = "Drag & Drop to Upload File";
+ }
 }
