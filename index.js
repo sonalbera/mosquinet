@@ -18,8 +18,7 @@ const sharedKeyCredential = new StorageSharedKeyCredential(
 const pipeline = newPipeline(sharedKeyCredential);
 
 const blobServiceClient = new BlobServiceClient(
-    //`https://${process.env.AZURE_STORAGE_ACCOUNT_NAME}.blob.core.windows.net`,
-    `https://drive.google.com/file/d/1tmSDQMNgm-ElN47IxCJSGN3knzmRDamY/view?usp=sharing`,
+    `https://${process.env.AZURE_STORAGE_ACCOUNT_NAME}.blob.core.windows.net`,
     pipeline
 );
 const containerClient = blobServiceClient.getContainerClient(process.env.CONTAINER_NAME1);
@@ -29,7 +28,7 @@ app.get('/upload', (req, res) => {
 });
 
 app.post('/upload', async (req, res) => {
-    req.pipe(req.busboy);
+    /*req.pipe(req.busboy);
     var fstream;
     req.busboy.on('file', async function (fieldname, file, filename) {
         console.log(filename);
@@ -48,7 +47,10 @@ app.post('/upload', async (req, res) => {
                 res.send("Error occurred " + err.statusCode);
             }
         });        
-    });
+    });*/
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.redirect("/result/" + encodeURIComponent(`https://drive.google.com/file/d/1tmSDQMNgm-ElN47IxCJSGN3knzmRDamY/preview`));
     
 });
 

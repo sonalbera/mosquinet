@@ -4,16 +4,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mosquito detection results</title>
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="/css/style1.css">
+    <link rel="stylesheet" href="/css/style2.css" />
     </head>
-<body><div>
-        <h2>Potential mosquito breeding grounds</h2>
+<body class="container text-center"><div">
+        <h2>Potential mosquito breeding sites</h2>
+        <p>Your video has been marked with the detected potential breeding sites.</p>
+        <p>Please take the necessary action!</p>
         </div>
         <br>
         <div>
-    <video controls width="640" height="480">
-        <source src=<%=src%>>
-    </source>
+    <iframe src=<%=src%> width="960" height="720" allow="autoplay" allowfullscreen>
+    </iframe>
     </video>
     </div>
 </body>
