@@ -10,8 +10,7 @@ body{
   align-items: center;
   justify-content: center;
   min-height: 100vh;
- background: rgb(2,0,36);
-background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 51%, rgba(0,212,255,1) 100%);
+ background: #5256ad
 }
 .drag-area{
   border: 2px dashed #fff;
@@ -57,4 +56,12 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 51%, rgba
   width: 100%;
   object-fit: cover;
   border-radius: 5px;
+}
+
+.checkbtn{
+  color: black;
+  position: relative;
+  top: 300px;
+  right: 450px;
+  
 }
