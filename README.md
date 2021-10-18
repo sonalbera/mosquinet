@@ -7,3 +7,5 @@ The user can upload any aerial video footage to the website to detect the breedi
 This simple yet effective automated task will have a huge benefit as it can enable government authorities, NGOs, businesses and even individual users to take timely actions to control the spread of mosquitoes and related diseases. This can not only save and improve precious lives, but also help everyone fight the deadly menace of vector-borne diseases in a timely and efficient manner.
 
 Thus, MosquiNet reiterates Microsoft’s vision to use the power of technology to empower people and make this world a better, healthier and happier place!
+
+Try out the MosquiNet program at : http://mosquinetmshack.azurewebsites.net/
