@@ -1,8 +1,3 @@
-/*
-	Visual by TEMPLATE STOCK
-	templatestock.co @templatestock
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
-*/
 
 (function($) {
     "use strict";
