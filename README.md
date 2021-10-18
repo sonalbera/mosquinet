@@ -1,3 +1,5 @@
+![](public/img/background/mosquinet.jpg)
+
 MosquiNet is an innovative project that allows users to easily detect any potential mosquito breeding grounds from any aerial videos. It is developed as a software solution that takes in an aerial video of an area as its input, stores the video in Azure Blob storage and utilizes the power of Azure Machine Learning to detect any potential mosquito breeding sites in the video and also highlights those areas in that video.
 
 The user can upload any aerial video footage to the website to detect the breeding sites and then will be presented with the potential breeding sites marked as bounding boxes in the video.
