@@ -45,8 +45,8 @@ Table of Contents:
 @import "cubeportfolio.min.css"; 
 
 /*----- Fonts -----*/
-@import url(http://fonts.googleapis.com/css?family=Exo:400,700,800,900);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+@import url(https://fonts.googleapis.com/css?family=Exo:400,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
 @import "simple-line-icons.css";
 @import "ionicons.min.css";
 
@@ -645,11 +645,6 @@ p {
 }
 @media (max-width:600px) {
     .tp-banner .home-subheading {
-        display: none;
-    }
-}
-@media (max-width:500px) { 
-    .tp-banner .btn {
         display: none;
     }
 }
