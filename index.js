@@ -51,14 +51,13 @@ app.post('/upload', async (req, res) => {
                     });
 
                     detectRes.on('end', () => {
-                        console.log(data);
+                        res.redirect("/result/" + data);
                     })
                 });
                 detectReq.on('error', err => {
                     console.log(err);
                 })
                 detectReq.end();
-                res.redirect("/result/"+encodeURIComponent(blockBlobClient.url));
             } catch (err) {
                 res.send("Error occurred " + err.statusCode);
             }
